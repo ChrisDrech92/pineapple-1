@@ -1,3 +1,7 @@
+<html>
+  <form>
+    <input id="searchinput" type="text" class="form-control" placeholder="Search..." ng-model="searchDevice">
+  </form>
 <table class="table">
   <caption>Company Devices</caption>
   <thead>
@@ -8,10 +12,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="row in $ctrl.collection.rows">
+    <tr ng-repeat="row in $ctrl.collection.rows | filter:searchDevice">
       <td ng-repeat="column in row track by $index"
           ng-bind="column">
       </td>
     </tr>
   </tbody>
 </table>
+</html>
