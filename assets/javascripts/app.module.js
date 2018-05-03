@@ -3,6 +3,7 @@
 
   angular.module('application', [
     'deviceFactory',
-    'deviceTable'
+    'deviceTable',
+    'pineappleController',
   ]);
 })();
